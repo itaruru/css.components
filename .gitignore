@@ -1,0 +1,23 @@
+# disable all
+/*
+ 
+# enable files
+!/.gitignore
+!/.node-version
+!/.ruby-version
+!/config.rb
+!/Gemfile
+!/Gruntfile.js
+!/LICENCE.md
+!/package.json
+!/project.sublime-project
+!/README.md
+ 
+# enable dirs
+!/doc
+!/images
+!/sass
+ 
+# disable extra files
+ 
+# disable extra dirs
