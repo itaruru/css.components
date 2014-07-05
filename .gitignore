@@ -17,7 +17,10 @@
 !/doc
 !/images
 !/sass
+!/spec
  
 # disable extra files
  
 # disable extra dirs
+/sass/bourbon
+/spec/stylesheets

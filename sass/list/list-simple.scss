@@ -1,12 +1,12 @@
 /*
-# .image-list
+# .list-simple
 
-.simple-list は Smart Phone 向けのシンプルな縦並びリストを作成するための CSS です。
+.list-simple は Smart Phone 向けのシンプルな縦並びリストを作成するための CSS です。
 
 ## Sample
 
 ```html
-<div class="simple-list">
+<div class="list-simple">
   <a href="#">
     <img src="#" alt=" ">
     <span class="m-tilte">タイトル</span>
@@ -17,11 +17,16 @@
 </div>
 ```
 */
-div.simple-list {
+
+@import 'bourbon/bourbon';
+
+div.list-simple {
   margin: 0px;
   padding: 7px 0 1px 5px;
   border-bottom: 1px solid #E0E0E0;
   min-height: 50px;
+
+  /*@include linear-gradient(to top, red, orange);*/
 
   img {
     margin-right: 5px;
@@ -34,7 +39,7 @@ div.simple-list {
     display: block;
     margin: -5px 0 0 -5px;
     padding: 5px 30px 1px 5px;
-    background: inline-image('list/simple-list/arrow_right.png') no-repeat right center;
+    background: inline-image('list/list-simple/arrow_right.png') no-repeat right center;
     background-size: 25px 20px;
     text-decoration: none;
     -webkit-background-size: 25px 20px;

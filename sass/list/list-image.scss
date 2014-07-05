@@ -1,13 +1,13 @@
 /*
-# .image-list
+# .list-image
 
-.image-list は Smart Phone 向けのシンプルな横並び画像リストを作成するための CSS です
+.list-image は Smart Phone 向けのシンプルな横並び画像リストを作成するための CSS です
 
 ## Sample
 
 ```html
-<div class="image-list">
-  <div class="photo">
+<div class="list-image">
+  <div class="inner">
     <a href="#">
       <img src="#" alt=" ">
     </a>
@@ -15,10 +15,10 @@
 </div>
 ```
 */
-div.image-list {
+div.list-image {
   width: 100%;
 
-  div.photo {
+  div.inner {
     float: left;
     width: 32%;
     margin: 2px 3px 0 1px;

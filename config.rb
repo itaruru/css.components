@@ -4,12 +4,19 @@
 http_path       = "/"
 sass_dir        = "sass"
 images_dir      = "images"
-css_dir         = "dist/stylesheets"
-javascripts_dir = "dist/javascripts"
+
+if (environment == :production)
+  css_dir         = "dist/stylesheets"
+  javascripts_dir = "dist/javascripts"
+  output_style    = :compressed
+else
+  css_dir         = "spec/stylesheets"
+  javascripts_dir = "spec/javascripts"
+  output_style    = :expanded
+end
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

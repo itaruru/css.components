@@ -1,23 +1,23 @@
 /*
-# .well-list
+# .list-well
 
 ## Sample
 
 ```html
-<div class="well">
-  <div class="tapLink">
+<div class="list-well">
+  <div class="tap-link">
     <a href="#">List 1</a>
   </div>
-  <div class="tapLink">
+  <div class="tap-link">
     <a href="#">List 2</a>
   </div>
-  <div class="tapLink">
+  <div class="tap-link">
     <a href="#">List 3</a>
   </div>
 </div>
 ```
 */
-div.well {
+div.list-well {
   width: 296px;
   font-weight: bold;
   color: white;
@@ -25,7 +25,7 @@ div.well {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
 
-  div.tapLink {
+  div.tap-link {
     background: rgba(0, 0, 0, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.45);
@@ -50,7 +50,7 @@ div.well {
     }
   }
 
-  div.tapLink:first-child {
+  div.tap-link:first-child {
     -webkit-border-top-left-radius: 9px;
     -webkit-border-top-right-radius: 9px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.45);
@@ -58,7 +58,7 @@ div.well {
   }
 
 
-  div.tapLink:last-child {
+  div.tap-link:last-child {
     -webkit-border-bottom-left-radius: 9px;
     -webkit-border-bottom-right-radius: 9px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
