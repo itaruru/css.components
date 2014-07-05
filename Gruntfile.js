@@ -1,9 +1,18 @@
 module.exports = function(grunt){
-  grunt.loadNpmTasks('grunt-styleguide');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-kss');
 
   grunt.initConfig({
+    watch: {
+      src: {
+        files: 'sass/{,*/}*.scss',
+        tasks: ['default'],
+      }
+    },
+
     compass: {
       dist: {
         options: {
@@ -14,41 +23,45 @@ module.exports = function(grunt){
       }
     },
 
-    styleguide: {
-      styledocco: {
-        options: {
-          name: 'Project-IO CSS Components',
-          framework: {
-            name: 'styledocco',
-            options: {
-              preprocessor: 'bundle exec sass --compass'
-            }
-          },
-          template: {
-            include: []
-          }
-        },
+    concat: {
+      dist: {
         src: [
-          'sass/**/*.scss',
-          '!ie.scss',
-          '!print.scss',
-          '!screen.scss'
+          'dist/stylesheets/*.css'
         ],
-        dest: 'doc'
+        dest: '.tmp/style.css',
+      },      
+    },
+
+    kss: {
+      options: {
+        template: 'helpers/kss_template',
+        includeType: 'css',
+        includePath: '.tmp/style.css'
+      },
+      dist: {
+        files: {
+          'doc': 'sass'
+        }
       }
     },
+
     clean: {
-      styleguide: [
-        '<%= styleguide.styledocco.dest %>',
+      dist: [
+        'doc',
         'dist',
         '.sass-cache'
+      ],
+      after: [
+        '.tmp'
       ]
     }
   });
 
   grunt.registerTask('default', [
-    'clean',
-    'styleguide',
-    'compass:dist'
+    'clean:dist',
+    'compass:dist',
+    'concat',
+    'kss',
+    'clean:after'
   ]);
 };

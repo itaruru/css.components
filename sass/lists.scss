@@ -1,0 +1,177 @@
+/*
+Lists
+
+スマートフォン用のいくつかのリストを定義 
+
+Styleguide 1
+*/
+
+/*
+.list-image
+
+.list-image は Smart Phone 向けのシンプルな横並び画像リスト。
+
+Markup:
+<div class="list-image">
+  <div class="inner">
+    <a href="#">
+      <img src="#" alt=" ">
+    </a>
+  </div>
+</div>
+
+Styleguide 1.1
+*/
+div.list-image {
+  width: 100%;
+
+  div.inner {
+    float: left;
+    width: 32%;
+    margin: 2px 3px 0 1px;
+
+    img {
+      border: 1px solid #CAC7C9;
+      max-width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+
+    a:hover img {
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+  }
+}
+
+/*
+.list-simple
+
+.list-simple は Smart Phone 向けのシンプルな縦並びリスト。
+
+Markup:
+<div class="list-simple">
+  <a href="#">
+    <img src="#" alt=" ">
+    <span class="m-tilte">タイトル</span>
+    <br clear="all">
+    <span class="m-act1">ラベル</span>
+    <span class="m-act2">サブタイトル</span>
+  </a>
+</div>
+
+Styleguide 1.2.
+*/
+
+div.list-simple {
+  margin: 0px;
+  padding: 7px 0 1px 5px;
+  border-bottom: 1px solid #E0E0E0;
+  min-height: 50px;
+
+  img {
+    margin-right: 5px;
+    border: 2px solid #999;
+    display: block;
+    float: left;
+  }
+
+  a {
+    display: block;
+    margin: -5px 0 0 -5px;
+    padding: 5px 30px 1px 5px;
+    background: inline-image('list/list-simple/arrow_right.png') no-repeat right center;
+    background-size: 25px 20px;
+    text-decoration: none;
+    -webkit-background-size: 25px 20px;
+    -moz-background-size: 25px 20px;
+
+    span {
+      font-weight: bold;
+    }
+
+    span.m-tilte {
+      font-size: 118%;
+      color: #333;
+      line-height: 130%;
+    }
+
+    span.m-act1 {
+      font-size: 106%;
+      color: #333;
+    }
+
+    span.m-act2 {
+      font-size: 106%;
+      color: #FF3366;
+      line-height: 130%;
+    }
+  }
+}
+
+/*
+.list-well
+
+Markup:
+<div class="list-well">
+  <div class="tap-link">
+    <a href="#">List 1</a>
+  </div>
+  <div class="tap-link">
+    <a href="#">List 2</a>
+  </div>
+  <div class="tap-link">
+    <a href="#">List 3</a>
+  </div>
+</div>
+
+Styleguide 1.3.
+*/
+div.list-well {
+  width: 296px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.45);
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+
+  div.tap-link {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+
+    a {
+      padding: 14px 18px 18px 52px;
+      line-height: 15px;
+      font-size: 13px;
+      text-align: left;
+      font-weight: bold;
+      color: white;
+      font-family: Helvetica, Sans-Serif, Arial;
+      text-shadow: rgba(0, 0, 0, 0.75) 0px -1px 0px;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  div.tap-link:first-child {
+    -webkit-border-top-left-radius: 9px;
+    -webkit-border-top-right-radius: 9px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+    border-top: 1px solid rgba(18, 18, 18, 0);
+  }
+
+
+  div.tap-link:last-child {
+    -webkit-border-bottom-left-radius: 9px;
+    -webkit-border-bottom-right-radius: 9px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+  }
+}

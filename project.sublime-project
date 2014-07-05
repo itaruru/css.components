@@ -9,8 +9,7 @@
         "bundler",
         "dist",
         "node_modules",
-        "sass/bourbon",
-        "spec/stylesheets"
+        "sass/vendor"
       ],
       "file_exclude_patterns": [
         ".tags",

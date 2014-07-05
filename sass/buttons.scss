@@ -1,11 +1,18 @@
 /*
-# .btn-minimal
+Buttons
 
-## Sample
+Styleguide 2
+*/
 
-```html
+/*
+.btn-minimal
+
+影無しのフラットなボタン。
+
+Markup:
 <button class="btn-minimal" style="width:20%;">Button</button>
-```
+
+Styleguide 2.1
 */
 button.btn-minimal {
   background: #e3e3e3;
@@ -37,15 +44,14 @@ button.btn-minimal:active {
 }
 
 /*
-# .btn-clean-gray
+.btn-clean-gray
 
-シンプルなボタンを作成するための CSS です
+シンプルなボタン。
 
-## Sample
-
-```html
+Markup:
 <button class="btn-clean-gray" style="width:20%;">Submit</button>
-```
+
+Styleguide 2.2
 */
 button.btn-clean-gray {
   background-color: #eeeeee;
