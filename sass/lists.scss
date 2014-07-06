@@ -12,7 +12,7 @@ Styleguide 1
 .list-image は Smart Phone 向けのシンプルな横並び画像リスト。
 
 Markup:
-<div class="list-image">
+<div class="list-image {$modifiers}">
   <div class="inner">
     <a href="#">
       <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
@@ -50,7 +50,7 @@ div.list-image {
 .list-simple は Smart Phone 向けのシンプルな縦並びリスト。
 
 Markup:
-<div class="list-simple">
+<div class="list-simple {$modifiers}">
   <a href="#">
     <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
     <span class="m-tilte">タイトル</span>
@@ -62,7 +62,6 @@ Markup:
 
 Styleguide 1.2.
 */
-
 div.list-simple {
   margin: 0px;
   padding: 7px 0 1px 5px;

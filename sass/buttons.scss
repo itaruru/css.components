@@ -10,13 +10,13 @@ Styleguide 2
 影無しのフラットなボタン。
 
 Markup:
-<button class="btn-minimal">Button</button>
+<button class="btn-minimal {$modifiers}">Button</button>
 
 Styleguide 2.1
 */
 button.btn-minimal {
   background: #e3e3e3;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
   box-shadow: inset 0 0 1px 1px #f6f6f6;
@@ -44,23 +44,29 @@ button.btn-minimal:active {
 }
 
 /*
-.btn-clean-gray
+.btn-clear
 
 シンプルなボタン。
 
+.primary - the primay button.
+.normal  - the normal button.
+
 Markup:
-<button class="btn-clean-gray">Submit</button>
+<button class="btn-clear {$modifiers}">Submit</button>
 
 Styleguide 2.2
 */
-button.btn-clean-gray {
-  background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: linear-gradient(top, #eeeeee, #cccccc);
+button.btn-clear {
+  @mixin _bgi($t, $l) {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $t), color-stop(100%, $l));
+    background-image: -webkit-linear-gradient(top, $t, $l);
+    background-image:    -moz-linear-gradient(top, $t, $l);
+    background-image:     -ms-linear-gradient(top, $t, $l);
+    background-image:      -o-linear-gradient(top, $t, $l);
+    background-image:         linear-gradient(top, $t, $l);
+  }
+
+  @include _bgi(#eeeeee, #cccccc);
   border: 1px solid #ccc;
   border-bottom: 1px solid #bbb;
   border-radius: 3px;
@@ -70,47 +76,44 @@ button.btn-clean-gray {
   text-align: center;
   text-shadow: 0 1px 0 #eee;
   width: 100%;
-}
 
-button.btn-clean-gray:hover {
-  background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
-  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: linear-gradient(top, #dddddd, #bbbbbb);
-  border: 1px solid #bbb;
-  border-bottom: 1px solid #999;
-  cursor: pointer;
-  text-shadow: 0 1px 0 #ddd;
-}
-
-button.btn-clean-gray:active {
-  border: 1px solid #aaa;
-  border-bottom: 1px solid #888;
-  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-}
-
-
-/*
-.btn-b
-
-シンプルなボタン。
-
-Markup:
-<button class="btn-b">Submit</button>
-
-Styleguide 2.3
-*/
-button.btn-b {
-
-  &::hover {
+  &:hover {
+    @include _bgi(#dddddd, #bbbbbb);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd;
   }
 
-  &::before {}
-  &::after  {}
+  &:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  }
+
+  &.primary {
+    background-color: #4EB6E7;
+    @include _bgi(#4EB6E7, #A4C7DF);
+
+    &:hover {
+      @include _bgi(#4E73E7, #bbbbbb);
+    }
+
+    &:active {
+
+    }    
+  }
+
+  &.normal {
+    background-color: #eeeeee;
+
+    &:hover {
+      background-color: #dddddd;
+    }
+
+    &:active {
+
+    }
+  }
 }
-
-
