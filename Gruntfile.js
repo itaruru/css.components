@@ -40,14 +40,14 @@ module.exports = function(grunt){
       },
       dist: {
         files: {
-          'doc': 'sass'
+          'doc/main': 'sass'
         }
       }
     },
 
     clean: {
       dist: [
-        'doc',
+        'doc/main',
         'dist',
         '.sass-cache'
       ],

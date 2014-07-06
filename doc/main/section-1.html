@@ -31,7 +31,9 @@
 <body><div id="kss-wrapper">
   <div id="kss-nav">
     <header id="kss-header">
-      <hgroup><h1>Project-IO - CSS Components</h1></hgroup>
+      <hgroup>
+        <h1>Project-IO<br>CSS Components</h1>
+      </hgroup>
     </header>
     <aside>
       <nav><ul>
@@ -45,6 +47,8 @@
         
           <li><a href="section-4.html">4.0: Boxes</a></li>
         
+          <li><a href="section-5.html">5.0: Forms</a></li>
+        
       </ul></nav>
     </aside>
   </div>
@@ -55,31 +59,47 @@
         
         
           
-            <h1 class="kss-title"><span class="kss-ref">4.0</span> - Boxes</h1>
+            <h1 class="kss-title"><span class="kss-ref">1.0</span> - Lists</h1>
           
             
+                
+                  <p>スマートフォン用のいくつかのリストを定義 </p>
+
                 
             
            
         
           
            <section class="kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">4.1</span> - .rotate-box</h1>
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> - .list-image</h1>
           
             
-                <div class="kss-box"></div>
+                <div class="kss-box"><p>.list-image は Smart Phone 向けのシンプルな横並び画像リスト。</p>
+</div>
                 <table class="kss-mod-list">
                   <tr class="kss-mod-desc-group">
                     <td class="kss-mod-desc"><p>Default styling</p></td>
                     <td class="kss-mod-name"></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="rotate-box"></div></td>
+                    <td colspan="2"><div class="list-image">
+  <div class="inner">
+    <a href="#">
+      <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    </a>
+  </div>
+</div></td>
                   </tr>
                 
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;rotate-box&quot;&gt;&lt;/div&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;list-image&quot;&gt;
+  &lt;div class=&quot;inner&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;img src=&quot;../assets/icon.jpg&quot; width=&quot;40&quot; height=&quot;40&quot; alt=&quot;alt&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
                 </div>
             
           
@@ -88,7 +108,48 @@
         
           
            <section class="kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">4.2</span> - .flexible-box</h1>
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> - .list-simple</h1>
+          
+            
+                <div class="kss-box"><p>.list-simple は Smart Phone 向けのシンプルな縦並びリスト。</p>
+</div>
+                <table class="kss-mod-list">
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>Default styling</p></td>
+                    <td class="kss-mod-name"></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="list-simple">
+  <a href="#">
+    <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    <span class="m-tilte">タイトル</span>
+    <br>
+    <span class="m-act1">ラベル</span>
+    <span class="m-act2">サブタイトル</span>
+  </a>
+</div></td>
+                  </tr>
+                
+                </table>
+                <div class="kss-markup">
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;list-simple&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;
+    &lt;img src=&quot;../assets/icon.jpg&quot; width=&quot;40&quot; height=&quot;40&quot; alt=&quot;alt&quot;&gt;
+    &lt;span class=&quot;m-tilte&quot;&gt;タイトル&lt;/span&gt;
+    &lt;br&gt;
+    &lt;span class=&quot;m-act1&quot;&gt;ラベル&lt;/span&gt;
+    &lt;span class=&quot;m-act2&quot;&gt;サブタイトル&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</pre>
+                </div>
+            
+          
+            </section>
+          
+        
+          
+           <section class="kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.3</span> - .list-well</h1>
           
             
                 <div class="kss-box"></div>
@@ -98,23 +159,31 @@
                     <td class="kss-mod-name"></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="flexible-box">
-  <div class="child">child box 1</div>
-  <div class="child">child box 2</div>
-  <div class="child">child box 3</div>
-  <div class="child">child box 4</div>
-  <div class="child">child box 5</div>
+                    <td colspan="2"><div class="list-well">
+  <div class="tap-link">
+    <a href="#">List 1</a>
+  </div>
+  <div class="tap-link">
+    <a href="#">List 2</a>
+  </div>
+  <div class="tap-link">
+    <a href="#">List 3</a>
+  </div>
 </div></td>
                   </tr>
                 
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;flexible-box&quot;&gt;
-  &lt;div class=&quot;child&quot;&gt;child box 1&lt;/div&gt;
-  &lt;div class=&quot;child&quot;&gt;child box 2&lt;/div&gt;
-  &lt;div class=&quot;child&quot;&gt;child box 3&lt;/div&gt;
-  &lt;div class=&quot;child&quot;&gt;child box 4&lt;/div&gt;
-  &lt;div class=&quot;child&quot;&gt;child box 5&lt;/div&gt;
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;list-well&quot;&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;List 1&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;List 2&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;List 3&lt;/a&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
                 </div>
             

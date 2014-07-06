@@ -15,7 +15,7 @@ Markup:
 <div class="list-image">
   <div class="inner">
     <a href="#">
-      <img src="#" alt=" ">
+      <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
     </a>
   </div>
 </div>
@@ -52,9 +52,9 @@ div.list-image {
 Markup:
 <div class="list-simple">
   <a href="#">
-    <img src="#" alt=" ">
+    <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
     <span class="m-tilte">タイトル</span>
-    <br clear="all">
+    <br>
     <span class="m-act1">ラベル</span>
     <span class="m-act2">サブタイトル</span>
   </a>
@@ -71,7 +71,7 @@ div.list-simple {
 
   img {
     margin-right: 5px;
-    border: 2px solid #999;
+    border: 1px solid #999999;
     display: block;
     float: left;
   }
