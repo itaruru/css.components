@@ -1,7 +1,7 @@
 /*
 Buttons
 
-Styleguide 2
+Styleguide 3
 */
 
 /*
@@ -9,10 +9,12 @@ Styleguide 2
 
 影無しのフラットなボタン。
 
+.mini - mini size button.
+
 Markup:
 <button class="btn-minimal {$modifiers}">Button</button>
 
-Styleguide 2.1
+Styleguide 3.1
 */
 button.btn-minimal {
   background: #e3e3e3;
@@ -26,21 +28,25 @@ button.btn-minimal {
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   width: 100%;
+
+  &:hover {
+    background: #d9d9d9;
+    -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+    box-shadow: inset 0 0 1px 1px #eaeaea;
+    color: #222;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: #d0d0d0;
+    -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
+    box-shadow: inset 0 0 1px 1px #e3e3e3;
+    color: #000;
+  }
 }
 
-button.btn-minimal:hover {
-  background: #d9d9d9;
-  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
-  box-shadow: inset 0 0 1px 1px #eaeaea;
-  color: #222;
-  cursor: pointer;
-}
-
-button.btn-minimal:active {
-  background: #d0d0d0;
-  -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
-  box-shadow: inset 0 0 1px 1px #e3e3e3;
-  color: #000;
+button.btn-minimal.mini {
+  width: 10%;  
 }
 
 /*
@@ -49,23 +55,24 @@ button.btn-minimal:active {
 シンプルなボタン。
 
 .primary - the primay button.
-.normal  - the normal button.
+.mini    - mini size button.
 
 Markup:
 <button class="btn-clear {$modifiers}">Submit</button>
 
-Styleguide 2.2
+Styleguide 3.2
 */
-button.btn-clear {
-  @mixin _bgi($t, $l) {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $t), color-stop(100%, $l));
-    background-image: -webkit-linear-gradient(top, $t, $l);
-    background-image:    -moz-linear-gradient(top, $t, $l);
-    background-image:     -ms-linear-gradient(top, $t, $l);
-    background-image:      -o-linear-gradient(top, $t, $l);
-    background-image:         linear-gradient(top, $t, $l);
-  }
 
+@mixin _bgi($t, $l) {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $t), color-stop(100%, $l));
+  background-image: -webkit-linear-gradient(top, $t, $l);
+  background-image:    -moz-linear-gradient(top, $t, $l);
+  background-image:     -ms-linear-gradient(top, $t, $l);
+  background-image:      -o-linear-gradient(top, $t, $l);
+  background-image:         linear-gradient(top, $t, $l);
+}
+
+button.btn-clear {
   @include _bgi(#eeeeee, #cccccc);
   border: 1px solid #ccc;
   border-bottom: 1px solid #bbb;
@@ -91,29 +98,21 @@ button.btn-clear {
     -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
     box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
   }
+}
 
-  &.primary {
-    background-color: #4EB6E7;
-    @include _bgi(#4EB6E7, #A4C7DF);
+button.btn-clear.primary {
+  background-color: #4EB6E7;
+  @include _bgi(#4EB6E7, #A4C7DF);
 
-    &:hover {
-      @include _bgi(#4E73E7, #bbbbbb);
-    }
-
-    &:active {
-
-    }    
+  &:hover {
+    @include _bgi(#4E73E7, #bbbbbb);
   }
 
-  &.normal {
-    background-color: #eeeeee;
+  &:active {
 
-    &:hover {
-      background-color: #dddddd;
-    }
+  }    
+}
 
-    &:active {
-
-    }
-  }
+button.btn-clear.mini {
+  width: 10%;  
 }
