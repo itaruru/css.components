@@ -5,34 +5,51 @@ Styleguide 100
 */
 
 %btn-base {
-  border:3px solid #000;
-  padding:10px 20px;
-  color:#fff;
-  border-radius:10px;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  border-radius: 3px;
+
+  &:active {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+  }
+
+  > span {
+    color: #000000;
+  }
 }
 
 /*
 .btn-twitter
 
 Markup:
-<button class="btn-twitter {$modifiers}">Twitter</button>
+<button class="btn-twitter {$modifiers}">Twitter<span>100</span></button>
 
 Styleguide 100.1
 */
 .btn-twitter {
   @extend %btn-base;
-  background:red;
+  background-color: #FF0000;
+
+  &:hover {
+     background-color: #FF00CC;
+  }
+
+  > span {
+    color: #FF00FF;
+  }
 }
 
 /*
 .btn-facebook
 
 Markup:
-<button class="btn-facebook {$modifiers}">Twitter</button>
+<button class="btn-facebook {$modifiers}">Facebook<span>100</span></button>
 
 Styleguide 100.2
 */
 .btn-facebook {
   @extend %btn-base;
-  background:blue;
+  background: blue;
 }
