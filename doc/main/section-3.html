@@ -25,17 +25,19 @@
               
               <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Patterns</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Lists</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Utils</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Buttons</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Lists</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Colors</span></a></li>
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Buttons</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Boxes</span></a></li>
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Colors</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Forms</span></a></li>
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Boxes</span></a></li>
               
-              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Tables</span></a></li>
+              <li class="kss-menu-item"><a href="section-7.html"><span class="kss-ref">7</span><span class="kss-name">Forms</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-8.html"><span class="kss-ref">8</span><span class="kss-name">Tables</span></a></li>
               
             </ul>
             
@@ -45,15 +47,15 @@
               
               
               
-              <li class="kss-menu-item"><a href="#section-3.1"><span class="kss-ref">3.1</span><span class="kss-name">.btn-minimal</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.1"><span class="kss-ref">3.1</span><span class="kss-name">.lt-image</span></a></li>
               
               
               
-              <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">.btn-clear</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">.lt-simple</span></a></li>
               
               
               
-              <li class="kss-menu-item"><a href="#section-3.2"><span class="kss-ref">3.2</span><span class="kss-name">.btn-base</span></a></li>
+              <li class="kss-menu-item"><a href="#section-3.3"><span class="kss-ref">3.3</span><span class="kss-name">.lt-well</span></a></li>
               
               
             </ul>
@@ -66,11 +68,11 @@
           
           
           <section id="section-3" class="kss-section kss-depth-1">
-            <h1 class="kss-title"><span class="kss-ref">3</span> Buttons</h1>
+            <h1 class="kss-title"><span class="kss-ref">3</span> Lists</h1>
             
             
             <div class="kss-description">
-              <p>prefix is <code>btn-</code></p>
+              <p>prefix is <code>lt-</code></p>
 
             </div>
             
@@ -78,112 +80,133 @@
           </section>
           
           <section id="section-3.1" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">3.1</span> .btn-minimal</h1>
+            <h1 class="kss-title"><span class="kss-ref">3.1</span> .lt-image</h1>
             
             
             <div class="kss-description">
-              <p>影無しのフラットなボタン。</p>
+              <p>.lt-image は Smart Phone 向けのシンプルな横並び画像リスト。</p>
 
             </div>
             
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <button class="btn-minimal {$modifiers}">Button</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.mini</div>
-                  <div class="kss-modifier-description">
-                    <p>mini size button.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <button class="btn-minimal mini">Button</button>
+                  <div class="lt-image {$modifiers}">
+  <div class="inner">
+    <a href="javascript:void(0);">
+      <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    </a>
+  </div>
+</div>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;button class=&quot;btn-minimal {$modifiers}&quot;&gt;Button&lt;/button&gt;</code></pre>
+                <pre><code data-language="html">&lt;div class=&quot;lt-image {$modifiers}&quot;&gt;
+  &lt;div class=&quot;inner&quot;&gt;
+    &lt;a href=&quot;javascript:void(0);&quot;&gt;
+      &lt;img src=&quot;../assets/icon.jpg&quot; width=&quot;40&quot; height=&quot;40&quot; alt=&quot;alt&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
             
           </section>
           
           <section id="section-3.2" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">3.2</span> .btn-clear</h1>
+            <h1 class="kss-title"><span class="kss-ref">3.2</span> .lt-simple</h1>
             
             
             <div class="kss-description">
-              <p>シンプルなボタン。</p>
+              <p>.lt-simple は Smart Phone 向けのシンプルな縦並びリスト。</p>
 
             </div>
             
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <button class="btn-clear {$modifiers}">Submit</button>
+                  <div class="lt-simple {$modifiers}">
+  <a href="javascript:void(0);">
+    <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    <span class="m-tilte">タイトル</span>
+    <br>
+    <span class="m-act1">ラベル</span>
+    <span class="m-act2">サブタイトル</span>
+  </a>
+</div>
                 </div>
               </div>
               
               <div class="kss-modifier">
                 <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.primary</div>
+                  <div class="kss-modifier-name">.normal</div>
                   <div class="kss-modifier-description">
-                    <p>the primay button.</p>
+                    <p>the normal font.</p>
 
                   </div>
                 </div>
                 <div class="kss-modifier-example">
-                  <button class="btn-clear primary">Submit</button>
-                </div>
-              </div>
-              
-              <div class="kss-modifier">
-                <div class="kss-modifier-head">
-                  <div class="kss-modifier-name">.mini</div>
-                  <div class="kss-modifier-description">
-                    <p>mini size button.</p>
-
-                  </div>
-                </div>
-                <div class="kss-modifier-example">
-                  <button class="btn-clear mini">Submit</button>
+                  <div class="lt-simple normal">
+  <a href="javascript:void(0);">
+    <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    <span class="m-tilte">タイトル</span>
+    <br>
+    <span class="m-act1">ラベル</span>
+    <span class="m-act2">サブタイトル</span>
+  </a>
+</div>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;button class=&quot;btn-clear {$modifiers}&quot;&gt;Submit&lt;/button&gt;</code></pre>
+                <pre><code data-language="html">&lt;div class=&quot;lt-simple {$modifiers}&quot;&gt;
+  &lt;a href=&quot;javascript:void(0);&quot;&gt;
+    &lt;img src=&quot;../assets/icon.jpg&quot; width=&quot;40&quot; height=&quot;40&quot; alt=&quot;alt&quot;&gt;
+    &lt;span class=&quot;m-tilte&quot;&gt;タイトル&lt;/span&gt;
+    &lt;br&gt;
+    &lt;span class=&quot;m-act1&quot;&gt;ラベル&lt;/span&gt;
+    &lt;span class=&quot;m-act2&quot;&gt;サブタイトル&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
             
           </section>
           
-          <section id="section-3.2" class="kss-section kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">3.2</span> .btn-base</h1>
+          <section id="section-3.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">3.3</span> .lt-well</h1>
             
-            
-            <div class="kss-description">
-              <p>標準のオレンジ色のボタン  </p>
-
-            </div>
             
             <div class="kss-modifier-block">
               <div class="kss-modifier kss-modifier-original">
                 <div class="kss-modifier-example">
-                  <button class="btn-base {$modifiers}">コミュニティに参加する</button>
-<button class="btn-base {$modifiers}">サークルに参加する</button>
-<button class="btn-base {$modifiers}">トピックを立てる</button>
+                  <div class="lt-well">
+  <div class="tap-link">
+    <a href="javascript:void(0);">List 1</a>
+  </div>
+  <div class="tap-link">
+    <a href="javascript:void(0);">List 2</a>
+  </div>
+  <div class="tap-link">
+    <a href="javascript:void(0);">List 3</a>
+  </div>
+</div>
                 </div>
               </div>
               
               <div class="kss-markup">
-                <pre><code data-language="html">&lt;button class=&quot;btn-base {$modifiers}&quot;&gt;コミュニティに参加する&lt;/button&gt;
-&lt;button class=&quot;btn-base {$modifiers}&quot;&gt;サークルに参加する&lt;/button&gt;
-&lt;button class=&quot;btn-base {$modifiers}&quot;&gt;トピックを立てる&lt;/button&gt;</code></pre>
+                <pre><code data-language="html">&lt;div class=&quot;lt-well&quot;&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;javascript:void(0);&quot;&gt;List 1&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;javascript:void(0);&quot;&gt;List 2&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tap-link&quot;&gt;
+    &lt;a href=&quot;javascript:void(0);&quot;&gt;List 3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
             

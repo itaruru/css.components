@@ -3,7 +3,7 @@ Buttons
 
 prefix is `btn-`
 
-Styleguide 3
+Styleguide 4
 */
 
 /*
@@ -16,7 +16,7 @@ Styleguide 3
 Markup:
 <button class="btn-minimal {$modifiers}">Button</button>
 
-Styleguide 3.1
+Styleguide 4.1
 */
 button.btn-minimal {
   background: #e3e3e3;
@@ -62,7 +62,7 @@ button.btn-minimal.mini {
 Markup:
 <button class="btn-clear {$modifiers}">Submit</button>
 
-Styleguide 3.2
+Styleguide 4.2
 */
 
 @mixin _bgi($t, $l) {
@@ -121,38 +121,4 @@ button.btn-clear.primary {
 
 button.btn-clear.mini {
   width: 10%;  
-}
-
-/*
-.btn-base
-
-標準のオレンジ色のボタン  
-
-Markup:
-<button class="btn-base {$modifiers}">コミュニティに参加する</button>
-<button class="btn-base {$modifiers}">サークルに参加する</button>
-<button class="btn-base {$modifiers}">トピックを立てる</button>
-
-Styleguide 3.2
-*/
-button.btn-base {
-  @include _btn_base();
-  @include _bgi(#ff9933, #ff9933);
-  color: #FFFFFF;
-  font-weight: normal;
-
-  &:hover {
-    @include _bgi(#ff9933, #ff9933);
-    border: 1px solid #bbbbbb;
-    border-bottom: 1px solid #999999;
-    cursor: pointer;
-    text-shadow: 0 1px 0 #dddddd;
-  }
-
-  &:active {
-    border: 1px solid #aaaaaa;
-    border-bottom: 1px solid #888888;
-    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
-  }
 }

@@ -1,0 +1,22 @@
+/*
+Utils
+
+Styleguide 2
+*/
+
+/*
+.clf
+
+clear fix
+
+Markup:
+<div class="clf">clear fix</div>
+
+Styleguide 2.1
+*/
+
+@import 'vendor/bourbon/bourbon';
+
+.clf {
+  @include clearfix;
+}
