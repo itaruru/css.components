@@ -9,11 +9,18 @@ module.exports = function(grunt){
     watch: {
       src: {
         files: 'sass/{,*/}*.scss',
-        tasks: ['default'],
+        tasks: ['devl'],
       }
     },
 
     compass: {
+      devl: {
+        options: {
+          config: 'config.rb',
+          environment: 'development',
+          bundleExec: true
+        }
+      },
       dist: {
         options: {
           config: 'config.rb',
@@ -56,6 +63,14 @@ module.exports = function(grunt){
       ]
     }
   });
+
+  grunt.registerTask('devl', [
+    'clean:dist',
+    'compass:devl',
+    'concat',
+    'kss',
+    'clean:after'
+  ]);
 
   grunt.registerTask('default', [
     'clean:dist',
