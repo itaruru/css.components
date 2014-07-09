@@ -1,18 +1,18 @@
 /*
 Lists
 
-スマートフォン用のいくつかのリストを定義 
+prefix is `lt-`
 
 Styleguide 2
 */
 
 /*
-.list-image
+.lt-image
 
-.list-image は Smart Phone 向けのシンプルな横並び画像リスト。
+.lt-image は Smart Phone 向けのシンプルな横並び画像リスト。
 
 Markup:
-<div class="list-image {$modifiers}">
+<div class="lt-image {$modifiers}">
   <div class="inner">
     <a href="javascript:void(0);">
       <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
@@ -22,7 +22,7 @@ Markup:
 
 Styleguide 2.1
 */
-div.list-image {
+div.lt-image {
   width: 100%;
 
   div.inner {
@@ -45,14 +45,14 @@ div.list-image {
 }
 
 /*
-.list-simple
+.lt-simple
 
-.list-simple は Smart Phone 向けのシンプルな縦並びリスト。
+.lt-simple は Smart Phone 向けのシンプルな縦並びリスト。
 
 .normal    - the normal font.
 
 Markup:
-<div class="list-simple {$modifiers}">
+<div class="lt-simple {$modifiers}">
   <a href="javascript:void(0);">
     <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
     <span class="m-tilte">タイトル</span>
@@ -64,7 +64,7 @@ Markup:
 
 Styleguide 2.2.
 */
-div.list-simple {
+div.lt-simple {
   &:active {
     background-color: #F2F2F2;
   }
@@ -89,7 +89,7 @@ div.list-simple {
     display: block;
     margin: -5px 0 0 -5px;
     padding: 5px 30px 1px 5px;
-    background: inline-image('list/list-simple/arrow_right.png') no-repeat right center;
+    background: inline-image('lists/lt-simple/arrow_right.png') no-repeat right center;
     background-size: 25px 20px;
     text-decoration: none;
     -webkit-background-size: 25px 20px;
@@ -118,7 +118,7 @@ div.list-simple {
   }
 }
 
-div.list-simple.normal {
+div.lt-simple.normal {
   a {
     span {
       font-weight: normal;
@@ -127,10 +127,10 @@ div.list-simple.normal {
 }
 
 /*
-.list-well
+.lt-well
 
 Markup:
-<div class="list-well">
+<div class="lt-well">
   <div class="tap-link">
     <a href="javascript:void(0);">List 1</a>
   </div>
@@ -144,7 +144,7 @@ Markup:
 
 Styleguide 2.3.
 */
-div.list-well {
+div.lt-well {
   width: 296px;
   font-weight: bold;
   color: white;

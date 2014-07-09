@@ -1,6 +1,8 @@
 /*
 Buttons
 
+prefix is `btn-`
+
 Styleguide 3
 */
 
@@ -22,7 +24,7 @@ button.btn-minimal {
   border-radius: 3px;
   -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
   box-shadow: inset 0 0 1px 1px #f6f6f6;
-  color: #333;
+  color: #333333;
   font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
   padding: 20px 0;
   text-align: center;
@@ -33,7 +35,7 @@ button.btn-minimal {
     background: #d9d9d9;
     -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
     box-shadow: inset 0 0 1px 1px #eaeaea;
-    color: #222;
+    color: #222222;
     cursor: pointer;
   }
 
@@ -41,7 +43,7 @@ button.btn-minimal {
     background: #d0d0d0;
     -webkit-box-shadow: inset 0 0 1px 1px #e3e3e3;
     box-shadow: inset 0 0 1px 1px #e3e3e3;
-    color: #000;
+    color: #000000;
   }
 }
 
@@ -74,8 +76,8 @@ Styleguide 3.2
 
 button.btn-clear {
   @include _bgi(#eeeeee, #cccccc);
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #bbb;
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #bbbbbb;
   border-radius: 3px;
   color: #333333;
   font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -86,15 +88,15 @@ button.btn-clear {
 
   &:hover {
     @include _bgi(#dddddd, #bbbbbb);
-    border: 1px solid #bbb;
-    border-bottom: 1px solid #999;
+    border: 1px solid #bbbbbb;
+    border-bottom: 1px solid #999999;
     cursor: pointer;
-    text-shadow: 0 1px 0 #ddd;
+    text-shadow: 0 1px 0 #dddddd;
   }
 
   &:active {
-    border: 1px solid #aaa;
-    border-bottom: 1px solid #888;
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #888888;
     -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
     box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
   }

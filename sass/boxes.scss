@@ -1,14 +1,16 @@
 /*
 Boxes
 
+prefix is `box-`
+
 Styleguide 5
 */
 
 /*
-.rotate-box
+.box-rotate
 
 Markup:
-<div class="rotate-box"></div>
+<div class="box-rotate"></div>
 
 Styleguide 5.1
 */
@@ -21,16 +23,16 @@ Styleguide 5.1
   border: 1px solid;
 }
 
-div.rotate-box {
+div.box-rotate {
   @include h;
   @include animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 
 /*
-.flexible-box
+.box-flexible
 
 Markup:
-<div class="flexible-box">
+<div class="box-flexible">
   <div class="child">child box 1</div>
   <div class="child">child box 2</div>
   <div class="child">child box 3</div>
@@ -40,7 +42,7 @@ Markup:
 
 Styleguide 5.2
 */
-div.flexible-box {
+div.box-flexible {
   border: 1px solid;
 
   @include display(flex);
