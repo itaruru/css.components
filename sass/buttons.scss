@@ -74,8 +74,8 @@ Styleguide 3.2
   background-image:         linear-gradient(top, $t, $l);
 }
 
-button.btn-clear {
-  @include _bgi(#eeeeee, #cccccc);
+@mixin _btn_base() {
+  width: 100%;
   border: 1px solid #cccccc;
   border-bottom: 1px solid #bbbbbb;
   border-radius: 3px;
@@ -84,7 +84,11 @@ button.btn-clear {
   padding: 20px 0;
   text-align: center;
   text-shadow: 0 1px 0 #eee;
-  width: 100%;
+}
+
+button.btn-clear {
+  @include _btn_base();
+  @include _bgi(#eeeeee, #cccccc);
 
   &:hover {
     @include _bgi(#dddddd, #bbbbbb);
@@ -117,4 +121,38 @@ button.btn-clear.primary {
 
 button.btn-clear.mini {
   width: 10%;  
+}
+
+/*
+.btn-base
+
+標準のオレンジ色のボタン  
+
+Markup:
+<button class="btn-base {$modifiers}">コミュニティに参加する</button>
+<button class="btn-base {$modifiers}">サークルに参加する</button>
+<button class="btn-base {$modifiers}">トピックを立てる</button>
+
+Styleguide 3.2
+*/
+button.btn-base {
+  @include _btn_base();
+  @include _bgi(#ff9933, #ff9933);
+  color: #FFFFFF;
+  font-weight: normal;
+
+  &:hover {
+    @include _bgi(#ff9933, #ff9933);
+    border: 1px solid #bbbbbb;
+    border-bottom: 1px solid #999999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #dddddd;
+  }
+
+  &:active {
+    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #888888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  }
 }
