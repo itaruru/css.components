@@ -15,7 +15,7 @@ Markup:
 <div class="lt-image {$modifiers}">
   <div class="inner">
     <a href="javascript:void(0);">
-      <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+      <img src="assets/icon.jpg" width="40" height="40" alt="alt">
     </a>
   </div>
 </div>
@@ -54,7 +54,7 @@ div.lt-image {
 Markup:
 <div class="lt-simple {$modifiers}">
   <a href="javascript:void(0);">
-    <img src="../assets/icon.jpg" width="40" height="40" alt="alt">
+    <img src="assets/icon.jpg" width="40" height="40" alt="alt">
     <span class="m-tilte">タイトル</span>
     <br>
     <span class="m-act1">ラベル</span>
@@ -89,7 +89,7 @@ div.lt-simple {
     display: block;
     margin: -5px 0 0 -5px;
     padding: 5px 30px 1px 5px;
-    background: inline-image('lists/lt-simple/arrow_right.png') no-repeat right center;
+    background: inline-image('assets/lists/lt-simple/arrow_right.png') no-repeat right center;
     background-size: 25px 20px;
     text-decoration: none;
     -webkit-background-size: 25px 20px;

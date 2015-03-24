@@ -1,26 +1,11 @@
-# disable all
-/*
- 
-# enable files
-!/.gitignore
-!/.node-version
-!/.ruby-version
-!/config.rb
-!/Gemfile
-!/Gruntfile.js
-!/LICENCE.md
-!/package.json
-!/project.sublime-project
-!/README.md
- 
-# enable dirs
-!/dist
-!/doc
-!/helpers
-!/images
-!/sass
- 
+# ignore files
+/project.sublime-workspace
+
+# ignore dirs
+/dist
+/doc
+/node_modules
+
 # disable extra files
- 
+
 # disable extra dirs
-/sass/vendor
