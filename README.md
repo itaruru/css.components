@@ -6,8 +6,8 @@
 $ npm install
 ```
 
-## How to generate production code and doc
+## How to generate doc
 
 ```bash
-$ npm run kss
+$ npm run doc
 ```
