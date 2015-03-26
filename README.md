@@ -6,8 +6,8 @@
 $ npm install
 ```
 
-## How to generate doc
+## How to generate docs
 
 ```bash
-$ npm run doc
+$ npm run docs
 ```

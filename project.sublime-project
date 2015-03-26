@@ -4,16 +4,12 @@
       "follow_symlinks": true,
       "path": ".",
       "folder_exclude_patterns": [
-        ".sass-cache",
-        ".bundle",
-        "bundler",
         "node_modules",
-        "sass/vendor"
+        "docs"
       ],
       "file_exclude_patterns": [
         ".tags",
-        ".tags_sorted_by_file",
-        "Gemfile.lock"
+        ".tags_sorted_by_file"
       ]
     }
   ]

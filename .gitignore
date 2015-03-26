@@ -3,7 +3,7 @@
 
 # ignore dirs
 /dist
-/doc
+/docs
 /node_modules
 
 # disable extra files

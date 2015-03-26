@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo 1",
-    "doc": "./node_modules/.bin/gulp"
+    "docs": "./node_modules/.bin/gulp docs"
   },
   "author": "Tomoyuki Tarumi",
   "license": "ISC",

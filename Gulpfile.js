@@ -12,7 +12,7 @@ bourbon.with('src/*.scss');
 gulp.task('clean', function(cb) {
   return del([
     'dist/',
-    'doc/'
+    'docs/'
   ], cb);
 });
 
@@ -22,7 +22,7 @@ gulp.task('kss', function() {
       overview:          'src/styleguide.md',
       templateDirectory: 'helpers/kss_template'
     }))
-    .pipe(gulp.dest('doc/'))
+    .pipe(gulp.dest('docs/'))
   ;
 });
 
@@ -33,16 +33,18 @@ gulp.task('kss-concat', function() {
       outputStyle: 'compressed'
     }))
     .pipe(gconcat('public/style.css'))
-    .pipe(gulp.dest('doc/'))
+    .pipe(gulp.dest('docs/'))
   ;
 });
 
 gulp.task('kss-copy', function() {
   return gulp.src('helpers/assets/*')
-    .pipe(gulp.dest('doc/assets/'))
+    .pipe(gulp.dest('docs/assets/'))
   ;
 });
 
-gulp.task('default', function() {
+gulp.task('docs', function() {
   runseq('clean', 'kss-concat', 'kss-copy', 'kss')
 });
+
+gulp.task('default', function() {});
